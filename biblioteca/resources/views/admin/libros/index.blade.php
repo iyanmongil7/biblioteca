@@ -18,7 +18,13 @@
         <th scope="col">{{ ("Imagen") }}</th>
     </tr>
     </thead>
+    @if (session('success'))
+        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
     <tbody>
+        
         @forelse($libros as $libro)
             <tr>
     
@@ -52,7 +58,6 @@
     </tbody>
 </table>
 
-<div class="mt-3">
 
 </div>
 @endsection

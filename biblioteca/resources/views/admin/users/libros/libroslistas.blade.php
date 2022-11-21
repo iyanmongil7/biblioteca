@@ -2,6 +2,8 @@
 
 @section('content')
 <main class="sm:container sm:mx-auto sm:mt-10">
+
+
     <div class="w-full sm:px-6">
 
         @if (session('status'))
@@ -21,7 +23,7 @@
                         <h2 class="px-2 py-2 text center">{{ $libro->nombre }}</h2>
                         <img class="w-100 img-fluid text-center" src="{{$libro->imagen}}">
                     
-                        @if(Auth::check() and Auth::user()->hasRoles('premium'))
+                        @if(Auth::check() and (Auth::user()->hasRoles('premium') or Auth::user()->hasRoles('admin')))
                     <a href="{{route('crearReserva', $libro->id)}}" class="btn btn-primary">
                         {{__('prestamo') }}
                     </a>
@@ -85,5 +87,6 @@
             </div>-->
         </div>
     </div>
+<div class="mt-3">l
 </main>
 @endsection

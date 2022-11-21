@@ -34,13 +34,13 @@ class LibroController extends Controller
     public function crearPrestamo($idLibro)
     {
         $idUsuario = Auth::user()->id;
-        $fecha = '2022-11-16';
+        $fecha = date('Y-m-d');
         Prestamo::create([
             'usuario'=> $idUsuario,
             'libros'=>$idLibro,
             'fecha'=>$fecha,
         ]);
-        return redirect(route("librosUser.index"))
+        return redirect(route("librosUser"))
         ->with("success", __("Prestamo creado!"));
     }
     

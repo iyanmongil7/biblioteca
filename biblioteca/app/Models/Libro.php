@@ -16,5 +16,10 @@ class Libro extends Model
         return $this->belongsToMany(User::class)->withTimestamps();
     }
 
+    public function libros()
+    {
+        return $this->belongsToMany(Prestamo::class);
+    }
+
 
 }

@@ -11,6 +11,7 @@
         <th scope="col">{{ ("Editorial") }}</th>
         <th scope="col">{{ ("Año") }}</th>
         <th scope="col">{{ ("Imagen") }}</th>
+        <th scope="col">{{ ("Prestamo") }}</th>
     </tr>
     </thead>
     <tbody>
@@ -37,7 +38,11 @@
         @endforelse
     </tbody>
 </table>
-
+@if (session('success'))
+        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
 <div class="mt-3">
 
 </div>
