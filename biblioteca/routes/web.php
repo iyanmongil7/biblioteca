@@ -28,13 +28,17 @@ Route::group(['middleware'=>['can:admin.list_users']], function(){
     Route::get('/admin',[\App\Http\Controllers\Admin\AdminController::class,'index']);
     Route::resource('admin/users', UserController::class);
     Route::resource('admin/libros', LibroController::class);
+    Route::get('admin/vistaPrestamos',[\App\Http\Controllers\Admin\LibroController::class,'verprestamo']);
 
 });
 
+Route::get('/admin/verprestamos', [\App\Http\Controllers\Admin\LibroController::class, 'verprestamo'])->name('verprestamo');
 Route::get('/librosUser', [\App\Http\Controllers\LibroController::class, 'index'])->name('librosUser');
+Route::get('/prestamos', [\App\Http\Controllers\LibroController::class, 'prestamos'])->name('prestamos');
 Route::get('/libroslistas', [\App\Http\Controllers\LibroController::class, 'listalibros'])->name('libroslistas');
 Route::get('/catalogolibros', [\App\Http\Controllers\LibroController::class, 'catalogolibros']);
 Route::get('/crearreserva/{id}', [\App\Http\Controllers\LibroController::class, 'crearPrestamo'])->name('crearReserva');
+Route::get('/borrarreserva/{id}', [\App\Http\Controllers\LibroController::class, 'borrarreserva'])->name('borrarreserva');
 
 Route::get('contacta',[ContactaController::class,'index'])->name('contacta.index');
 Route::post('contacta',[ContactaController::class,'store'])->name('contacta.store');

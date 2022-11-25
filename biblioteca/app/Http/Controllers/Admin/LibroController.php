@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Libro;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Prestamo;
 use Illuminate\Support\Facades\Storage;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class LibroController extends Controller
 {
@@ -29,6 +32,19 @@ class LibroController extends Controller
         return view("admin/libros.index", compact("libros"));
     }
 
+    public function verprestamo()
+    {
+        $prestamos = Prestamo::all(); 
+        $libros = [];
+        foreach ($prestamos as $prestamo) {
+            $libros[] = $prestamo->libro()->first();
+        }
+        return view("admin/libros/vistaPrestamos", compact("prestamos"));
+    }
+    public function vistaPrestamos(){
+        $users = User::all();
+        return view('admin.libros.vistaPrestamos', compact("users"));
+    }
     /**
      * Show the form for creating a new resource.
      *

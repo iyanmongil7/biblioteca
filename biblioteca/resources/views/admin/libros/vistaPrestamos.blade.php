@@ -2,27 +2,22 @@
 
 @section("content")
 
-    <h1 class="text-center text-dark">{{ __("Listado de libros") }}</h1>
-    <a href="" class="btn btn-primary btn-sm"></a>
-<table class="table table-success table-striped" style="width: 100%">
+    <h1 class="text-center text-success">{{ __("Listado de prestamos") }}</h1>
+<table class="table table-danger table-striped" style="width: 100%">
     <thead>
     <tr>
-        
-
+        <th scope="col">{{ ("Libro") }}</th>
         <th scope="col">{{ ("Nombre") }}</th>
-        <th scope="col">{{ ("Autor") }}</th>
-        <th scope="col">{{ ("Editorial") }}</th>
-        <th scope="col">{{ ("Año") }}</th>
     </tr>
     </thead>
     <tbody>
-        @forelse($libros as $libro)
+        @forelse($prestamos as $prestamo)
             <tr>
     
-                <td>{{ $libro->nombre }}</td>
-                <td>{{ $libro->autor }}</td>
-                <td>{{ $libro->editorial}}</td>
-                <td>{{ $libro->año }}</td>
+                <td>{{ $prestamo->libro()->first()->nombre }}</td>
+                <td>{{ $prestamo->user()->first()->name }}</td>
+
+            
             </tr>
         @empty
             <tr>
@@ -36,7 +31,11 @@
         @endforelse
     </tbody>
 </table>
-
+@if (session('success'))
+        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
 <div class="mt-3">
 
 </div>

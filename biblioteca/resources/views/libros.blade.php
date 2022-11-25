@@ -11,7 +11,7 @@
         <th scope="col">{{ ("Editorial") }}</th>
         <th scope="col">{{ ("Año") }}</th>
         <th scope="col">{{ ("Imagen") }}</th>
-        <th scope="col">{{ ("Prestamo") }}</th>
+        <th scope="col">{{ ("Quitar prestamo") }}</th>
     </tr>
     </thead>
     <tbody>
@@ -23,7 +23,10 @@
                 <td>{{ $libro->editorial}}</td>
                 <td>{{ $libro->año }}</td>
                 <td>{{ $libro->imagen }}</td>
-
+                <td>
+                <button class="btn btn-danger btn-sm" onclick="event.preventDefault() ; 
+                 document.getElementById('delete-libro-{{$libro->id }}-form').submit();">Devolver</button>
+                </td>
             
             </tr>
         @empty

@@ -19,15 +19,39 @@ class LibroController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */
+    */
+     public function prestamos()
+    {
+        $prestamos=Prestamo::all();
+        return view("prestamos", compact("prestamos"));
+    }
+    /*public function mostrar(Request $request)
+    {
+        $genero = $request->get('buscarpor');
+
+        $libros = Libros::where('Genero','like',"%$genero%")->paginate(6);
+
+        return view('libros.index', compact('libros'));
+    }*/
     public function index()
     {
-        $libros=Libro::paginate(10);
+        $user =  User::find(Auth::user()->id);
+        $prestamos=User::find(Auth::user()->id)->prestamos()->get();
+        $libros = [];
+        foreach ($prestamos as $prestamo) {
+            $libros[] = $prestamo->libro()->first();
+        }
         return view("libros", compact("libros"));
     }
 
-    public function catalogolibros(){
-        $libros = Libro::all();
+    public function catalogolibros(Request $request){
+        $titulo = $request->get('buscarpor');
+        if ($titulo == NULL) {
+            $libros = Libro::all();
+        }
+        else {
+            $libros = Libro::where('nombre','like',"%$titulo%")->get();
+        }
         return view('admin.users.libros.libroslistas', compact('libros'));
     }
 

@@ -13,12 +13,12 @@ class Prestamo extends Model
     
     public function libro()
     {
-        return $this->belongsTo(Libro::class);
+        return $this->belongsTo(Libro::class, 'libros');
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'usuario');
     }
 
 

@@ -250,7 +250,14 @@ return [
             'text' => 'Libros',
             'url'  => 'admin/libros',
             'icon' => 'fas fa-fw fa-book',
-        ],
+        ]
+        ,
+        [
+            'text' => 'Prestamos',
+            'url'  => 'admin/vistaPrestamos',
+            'icon' => 'fas fa-fw fa-book',
+        ]
+        ,
       
     ],
 

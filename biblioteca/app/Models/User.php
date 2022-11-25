@@ -52,4 +52,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Libro::class)->withTimestamps();
     }
     
+    public function prestamos()
+    {
+        return $this->hasMany(Prestamo::class, 'usuario');
+    }
 }
