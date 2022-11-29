@@ -29,9 +29,9 @@ Route::group(['middleware'=>['can:admin.list_users']], function(){
     Route::resource('admin/users', UserController::class);
     Route::resource('admin/libros', LibroController::class);
     Route::get('admin/vistaPrestamos',[\App\Http\Controllers\Admin\LibroController::class,'verprestamo']);
-
+    Route::get('admin/devolver/{id}',[\App\Http\Controllers\Admin\LibroController::class,'devolver'])->name('devolver');
 });
-
+Route::get('/pagar', [\App\Http\Controllers\LibroController::class, 'pagar'])->name('pagar');
 Route::get('/admin/verprestamos', [\App\Http\Controllers\Admin\LibroController::class, 'verprestamo'])->name('verprestamo');
 Route::get('/librosUser', [\App\Http\Controllers\LibroController::class, 'index'])->name('librosUser');
 Route::get('/prestamos', [\App\Http\Controllers\LibroController::class, 'prestamos'])->name('prestamos');

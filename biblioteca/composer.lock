@@ -1546,7 +1546,7 @@
                     "name": "Colin O'Dell",
                     "email": "colinodell@gmail.com",
                     "homepage": "https://www.colinodell.com",
-                    "role": "Lead Developer"
+                    "role": "Lead basico"
                 }
             ],
             "description": "Highly-extensible PHP Markdown parser which fully supports the CommonMark spec and GitHub-Flavored Markdown (GFM)",
@@ -1634,7 +1634,7 @@
                     "name": "Colin O'Dell",
                     "email": "colinodell@gmail.com",
                     "homepage": "https://www.colinodell.com",
-                    "role": "Lead Developer"
+                    "role": "Lead basico"
                 }
             ],
             "description": "Define configuration arrays with strict schemas and access values with dot notation",
@@ -3067,7 +3067,7 @@
                     "name": "Freek Van der Herten",
                     "email": "freek@spatie.be",
                     "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "role": "basico"
                 }
             ],
             "description": "Permission handling for Laravel 6.0 and up",
@@ -5412,7 +5412,7 @@
                 {
                     "name": "Tijs Verkoyen",
                     "email": "css_to_inline_styles@verkoyen.eu",
-                    "role": "Developer"
+                    "role": "basico"
                 }
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
@@ -5887,7 +5887,7 @@
                     "name": "Freek Van der Herten",
                     "email": "freek@spatie.be",
                     "homepage": "https://flareapp.io",
-                    "role": "Developer"
+                    "role": "basico"
                 }
             ],
             "description": "Solution contracts for Ignition",
@@ -6016,7 +6016,7 @@
                 {
                     "name": "Filipe Dobreira",
                     "homepage": "https://github.com/filp",
-                    "role": "Developer"
+                    "role": "basico"
                 }
             ],
             "description": "php error handling for cool kids",
@@ -6457,17 +6457,17 @@
                 {
                     "name": "Arne Blankerts",
                     "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "basico"
                 },
                 {
                     "name": "Sebastian Heuer",
                     "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "basico"
                 },
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "basico"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -6508,17 +6508,17 @@
                 {
                     "name": "Arne Blankerts",
                     "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "basico"
                 },
                 {
                     "name": "Sebastian Heuer",
                     "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "basico"
                 },
                 {
                     "name": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "basico"
                 }
             ],
             "description": "Library for handling version information and constraints",
@@ -8174,7 +8174,7 @@
                 {
                     "name": "Arne Blankerts",
                     "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "basico"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",

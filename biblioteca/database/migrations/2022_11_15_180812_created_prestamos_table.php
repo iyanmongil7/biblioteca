@@ -14,6 +14,7 @@ class CreatedPrestamosTable extends Migration
     public function up()
     {
         Schema::create('prestamos', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('usuario');
             $table->foreignId('libros');
             $table->date('fecha');

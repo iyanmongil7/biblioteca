@@ -25,14 +25,6 @@ class LibroController extends Controller
         $prestamos=Prestamo::all();
         return view("prestamos", compact("prestamos"));
     }
-    /*public function mostrar(Request $request)
-    {
-        $genero = $request->get('buscarpor');
-
-        $libros = Libros::where('Genero','like',"%$genero%")->paginate(6);
-
-        return view('libros.index', compact('libros'));
-    }*/
     public function index()
     {
         $user =  User::find(Auth::user()->id);
@@ -57,15 +49,27 @@ class LibroController extends Controller
 
     public function crearPrestamo($idLibro)
     {
-        $idUsuario = Auth::user()->id;
-        $fecha = date('Y-m-d');
-        Prestamo::create([
-            'usuario'=> $idUsuario,
-            'libros'=>$idLibro,
-            'fecha'=>$fecha,
-        ]);
-        return redirect(route("librosUser"))
-        ->with("success", __("Prestamo creado!"));
+        $prestado = Prestamo::where('libros', '=', $idLibro)->count();
+        $libro = Libro::find($idLibro);
+        if ($prestado < $libro->unidades) {
+            $idUsuario = Auth::user()->id;
+            $fecha = date('Y-m-d');
+            Prestamo::create([
+                'usuario'=> $idUsuario,
+                'libros'=>$idLibro,
+                'fecha'=>$fecha,
+            ]);
+            return redirect(route("librosUser"))
+            ->with("success", __("Prestamo creado!"));
+        }
+        else {
+            return redirect(route("librosUser"))
+            ->with("success", __("Prestamo no creado!"));
+        }
+    }
+
+    public function pagar(){
+        return view('/pagar');
     }
     
 }

@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             'autor'=>'J.K Rowling',
             'editorial'=>'Salamandra ABC',
             'año'=>'1997',
+            'unidades' => '3',
             'imagen'=>'harry.jpg'
         ]);
 
@@ -31,6 +32,7 @@ class DatabaseSeeder extends Seeder
             'autor'=>'J.R.R. Tolkien',
             'editorial'=>'Minorauto',
             'año'=>'1995',
+            'unidades' => '3',
             'imagen'=>'señoranillos.jpg'
         ]);
         
@@ -39,6 +41,7 @@ class DatabaseSeeder extends Seeder
             'autor'=>'Suzanne Collins',
             'editorial'=>'Scholastic Corporation',
             'año'=>'2012',
+            'unidades' => '3',
             'imagen'=>'juegosdelhambre.jpg'
         ]);
         Libro::create([
@@ -46,6 +49,7 @@ class DatabaseSeeder extends Seeder
             'autor'=>'C S. Lewis',
             'editorial'=>'Planeta',
             'año'=>'1950',
+            'unidades' => '3',
             'imagen'=>'cronicasnarnia.jpg'
         ]);
         Libro::create([
@@ -53,6 +57,7 @@ class DatabaseSeeder extends Seeder
             'autor'=>'Andrezej Sapkowski',
             'editorial'=>'Coleccionista',
             'año'=>'2002',
+            'unidades' => '3',
             'imagen'=>'thewitcher.jpg'
         ]);
         Libro::create([
@@ -60,6 +65,7 @@ class DatabaseSeeder extends Seeder
             'autor'=>'Oliver Bowden',
             'editorial'=>'Minorauto',
             'año'=>'2021',
+            'unidades' => '3',
             'imagen'=>'assassins.jpg'
         ]);
     }

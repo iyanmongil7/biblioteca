@@ -53,7 +53,7 @@
             bCR: 'getBoundingClientRect'
         };
         var VENDORS = (function () {
-            //https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix
+            //https://basico.mozilla.org/en-US/docs/Glossary/Vendor_Prefix
             var jsCache = {};
             var cssCache = {};
             var cssPrefixes = ['-webkit-', '-moz-', '-o-', '-ms-'];
@@ -5386,7 +5386,7 @@
 
                             /* the tabindex has to be removed due to;
                              * If you set the tabindex attribute on an <div>, then its child content cannot be scrolled with the arrow keys unless you set tabindex on the content, too
-                             * https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
+                             * https://basico.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
                              */
                             setupResponsiveEventListener(_viewportElement, _strMouseTouchDownEvent, bodyMouseTouchDownListener, false, true);
                         }

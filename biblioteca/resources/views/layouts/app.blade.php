@@ -54,6 +54,11 @@
                         {{ config('LibroController.name', 'CONTACTA') }}
                     </a>
                     @endif
+                    @if (Auth::check() and (Auth::user()->hasRoles('basico')))
+                    <a href="{{ url('/pagar') }}" class="p-5 text-lg font-semibold text-red-200 no-underline">
+                        {{ config('LibroController.name', 'PREMIUM') }}
+                    </a>
+                    @endif
                 </div>
                 <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
                     @guest

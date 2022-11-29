@@ -8,6 +8,7 @@
     <tr>
         <th scope="col">{{ ("Libro") }}</th>
         <th scope="col">{{ ("Nombre") }}</th>
+        <th scope="col">{{ ("Quitar prestamo") }}</th>
     </tr>
     </thead>
     <tbody>
@@ -17,7 +18,11 @@
                 <td>{{ $prestamo->libro()->first()->nombre }}</td>
                 <td>{{ $prestamo->user()->first()->name }}</td>
 
-            
+                <td>
+                    <a href="{{route('devolver', $prestamo->id)}}" class="btn btn-danger">
+                        {{__('devolver') }}
+                    </a>
+                </td>
             </tr>
         @empty
             <tr>

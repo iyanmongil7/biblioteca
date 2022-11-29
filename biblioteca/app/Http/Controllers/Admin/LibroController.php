@@ -35,16 +35,22 @@ class LibroController extends Controller
     public function verprestamo()
     {
         $prestamos = Prestamo::all(); 
-        $libros = [];
-        foreach ($prestamos as $prestamo) {
-            $libros[] = $prestamo->libro()->first();
-        }
         return view("admin/libros/vistaPrestamos", compact("prestamos"));
     }
+    
     public function vistaPrestamos(){
         $users = User::all();
         return view('admin.libros.vistaPrestamos', compact("users"));
     }
+    
+    public function devolver($id)
+    {
+        $prestamos = Prestamo::find($id);
+        $prestamos->delete();
+        return back()->with("success", __("Prestamo eliminado!")); 
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      *
