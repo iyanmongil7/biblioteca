@@ -83,6 +83,7 @@ class LibroController extends Controller
             "autor" => "required|string",
             "editorial" => "required|string",
             "año" => "required|string",
+            "unidades" => "required|integer",
             "imagen" => "required|image|mimes:jpg,gif,png,jpeg",
         ]);
 
@@ -91,6 +92,7 @@ class LibroController extends Controller
             'autor'=>$request->input("autor"),
             'editorial'=>$request->input("editorial"),
             'año'=>$request->input("año"),
+            'unidades'=>$request->input("unidades"),
             'imagen'=>$request->file("imagen")->store('', 'images'),
         ]);
         return redirect(route("libros.index"))
@@ -139,6 +141,7 @@ class LibroController extends Controller
             "autor" => "required|string",
             "editorial" => "required|string",
             "año" => "required|string",
+            "unidades" => "required|integer",
             "imagen" => "image|mimes:jpg,gif,png,jpeg",
         ]);
 
@@ -167,6 +170,10 @@ class LibroController extends Controller
     {
         $libros = Libro::find($id);
         $libros->delete();
-        return back()->with("success", __("Libro eliminado!"));
+        return redirect('/admin/libros')->with("success", __("Libro eliminado!"));
+    }
+
+    public function confirmarEliminar($id){
+        return view('admin/libros/confirmarEliminar', compact('id')) ;
     }
 }

@@ -100,4 +100,6 @@ class LibroController extends Controller
         return back()->with("success", __("Prestamo eliminado!")); 
         
     }
+
+   
 }

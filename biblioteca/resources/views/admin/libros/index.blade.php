@@ -15,6 +15,7 @@
         <th scope="col">{{ ("Autor") }}</th>
         <th scope="col">{{ ("Editorial") }}</th>
         <th scope="col">{{ ("Año") }}</th>
+        <th scope="col">{{ ("Unidades") }}</th>
         <th scope="col">{{ ("Imagen") }}</th>
     </tr>
     </thead>
@@ -32,17 +33,12 @@
                 <td>{{ $libro->autor }}</td>
                 <td>{{ $libro->editorial}}</td>
                 <td>{{ $libro->año }}</td>
+                <td>{{ $libro->unidades }}</td>
                 <td>{{ $libro->imagen }}</td>
 
                 <td><a href="{{route('libros.edit',  $libro->id )}}" class="btn btn-primary btn-sm">Editar</a></td>
                 <td>
-                <form id="delete-libro-{{$libro->id }}-form" action="{{route('libros.destroy', $libro->id)}}" method="POST" class="hidden">
-                    @method('DELETE')
-                    @csrf
-                </form>
-
-                <button class="btn btn-danger btn-sm" onclick="event.preventDefault() ; 
-                 document.getElementById('delete-libro-{{$libro->id }}-form').submit();">Eliminar</button>
+                <a href="{{route('confirmarEliminar',  $libro->id )}}" class="btn btn-primary btn-sm">eliminar</a>
                 </td>
             </tr>
         @empty

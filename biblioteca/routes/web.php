@@ -30,6 +30,7 @@ Route::group(['middleware'=>['can:admin.list_users']], function(){
     Route::resource('admin/libros', LibroController::class);
     Route::get('admin/vistaPrestamos',[\App\Http\Controllers\Admin\LibroController::class,'verprestamo']);
     Route::get('admin/devolver/{id}',[\App\Http\Controllers\Admin\LibroController::class,'devolver'])->name('devolver');
+    Route::get('admin/confirmarEliminar/{id}',[\App\Http\Controllers\Admin\LibroController::class,'confirmarEliminar'])->name('confirmarEliminar');
 });
 Route::get('/devolverPremium/{id}',[\App\Http\Controllers\LibroController::class,'devolverPremium'])->name('devolverPremium');
 Route::get('/pagado', [\App\Http\Controllers\LibroController::class, 'pagado'])->name('pagado');
