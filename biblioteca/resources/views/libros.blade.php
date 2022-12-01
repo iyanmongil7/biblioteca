@@ -24,10 +24,11 @@
                 <td>{{ $libro->año }}</td>
                 <td>{{ $libro->imagen }}</td>
                 <td>
-                <button class="btn btn-danger btn-sm" onclick="event.preventDefault() ; 
-                 document.getElementById('delete-libro-{{$libro->id }}-form').submit();">Devolver</button>
-                </td>
-            
+                <a href="{{route('devolverPremium', $libro->id)}}" class="btn btn-danger" text-center>
+                        {{__('Devolver') }}
+                    </a>
+                </div>
+                
             </tr>
         @empty
             <tr>

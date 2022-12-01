@@ -50,8 +50,21 @@ class LibroController extends Controller
     public function crearPrestamo($idLibro)
     {
         $prestado = Prestamo::where('libros', '=', $idLibro)->count();
-        $libro = Libro::find($idLibro);
-        if ($prestado < $libro->unidades) {
+        $tieneUsuario = Prestamo::where('usuario', '=', Auth::user()->id)->count();
+        $tieneEseLibro = Prestamo::where('usuario', '=', Auth::user()->id)
+            ->where('libros', '=', $idLibro)
+            ->count();
+            $libro = Libro::find($idLibro);
+
+        if($tieneUsuario == 5){
+            return redirect(route("librosUser"))
+            ->with("success", __("Tienes el maximo de prestamos"));
+        }
+        else if ($tieneEseLibro == 1) {
+            return redirect(route("librosUser"))
+            ->with("success", __("Tienes ese libro"));
+        }
+        else if ($prestado < $libro->unidades) {
             $idUsuario = Auth::user()->id;
             $fecha = date('Y-m-d');
             Prestamo::create([
@@ -72,4 +85,19 @@ class LibroController extends Controller
         return view('/pagar');
     }
     
+    public function pagado(){
+        $usuario = User::find(Auth::user()->id);
+        $usuario->removeRole('basico');
+        $usuario->assignRole('premium');
+
+        return view('/pagado');
+    }
+
+    public function devolverPremium($id)
+    {
+        $prestamos = Prestamo::find($id);
+        $prestamos->delete();
+        return back()->with("success", __("Prestamo eliminado!")); 
+        
+    }
 }

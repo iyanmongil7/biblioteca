@@ -16854,14 +16854,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * object is given, it takes precedence over `_.templateSettings` values.
      *
      * **Note:** In the development build `_.template` utilizes
-     * [sourceURLs](http://www.html5rocks.com/en/tutorials/basicotools/sourcemaps/#toc-sourceurl)
+     * [sourceURLs](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)
      * for easier debugging.
      *
      * For more information on precompiling templates see
      * [lodash's custom builds documentation](https://lodash.com/custom-builds).
      *
      * For more information on Chrome extension sandboxes see
-     * [Chrome's extensions documentation](https://basico.chrome.com/extensions/sandboxingEval).
+     * [Chrome's extensions documentation](https://developer.chrome.com/extensions/sandboxingEval).
      *
      * @static
      * @since 0.1.0
