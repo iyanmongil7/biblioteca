@@ -10,18 +10,48 @@
             </div>
         @endif
 
-        <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
+        <div class="carousel slide carousel-fade container" id="mi-carousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img style="width: 100%" src="harry.jpg" alt="">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Harry</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img style="width: 100%" src="hogwarts.jpg" alt="">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>hogwarts</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img style="width: 100%" src="divergente.jpg" alt="">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>divergente</h5>
+                        </div>
+                    </div>
 
-            <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                Dashboard
-            </header>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#mi-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
 
-            <div class="w-full p-6">
-                <p class="text-gray-700">
-                    You are logged in!
-                </p>
+                <button class="carousel-control-next" type="button" data-bs-target="#mi-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+
+              
+                <div class="carousel-indicators">
+                    <button type="button" class="active" data-bs-target="#mi-carousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
+                    <button type="button" class="" data-bs-target="#mi-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" class="" data-bs-target="#mi-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+
             </div>
-        </section>
     </div>
 </main>
 @endsection

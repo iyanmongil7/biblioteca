@@ -7,10 +7,10 @@
 <table class="table table-success table-striped" style="width: 100%">
     <thead>
     <tr>
+        <th scope="col">{{ ("Nª") }}</th>
         <th scope="col">{{ ("Nombre") }}</th>
         <th scope="col">{{ ("Email") }}</th>
-        <th scope="col">{{ ("Rol") }}</th>
-        <th scope="col">{{ ("Permisos") }}</th>
+        <th scope="col">{{ ("Roles") }}</th>
     </tr>
     </thead>
     <tbody>

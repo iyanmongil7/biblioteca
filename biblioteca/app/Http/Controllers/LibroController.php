@@ -29,11 +29,7 @@ class LibroController extends Controller
     {
         $user =  User::find(Auth::user()->id);
         $prestamos=User::find(Auth::user()->id)->prestamos()->get();
-        $libros = [];
-        foreach ($prestamos as $prestamo) {
-            $libros[] = $prestamo->libro()->first();
-        }
-        return view("libros", compact("libros"));
+        return view("libros", compact("prestamos"));
     }
 
     public function catalogolibros(Request $request){
@@ -85,7 +81,17 @@ class LibroController extends Controller
         return view('/pagar');
     }
     
-    public function pagado(){
+    public function pagado(Request $request){
+
+        $this->validate($request, [
+            "N_tarjeta"=>"required|max:2",
+            "Fecha_caducidad" =>"required|max:2",
+            "Codigo_seguridad" =>"required|max:2"
+        ],[
+            'required' => 'El campo :attribute es obligatorio.',
+            'max' => 'El campo :attribute tiene un tamaño maximo.'
+        ]);
+
         $usuario = User::find(Auth::user()->id);
         $usuario->removeRole('basico');
         $usuario->assignRole('premium');

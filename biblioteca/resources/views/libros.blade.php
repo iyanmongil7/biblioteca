@@ -15,16 +15,20 @@
     </tr>
     </thead>
     <tbody>
-        @forelse($libros as $libro)
+        @forelse($prestamos as $prestamo)
             <tr>
     
-                <td>{{ $libro->nombre }}</td>
-                <td>{{ $libro->autor }}</td>
-                <td>{{ $libro->editorial}}</td>
-                <td>{{ $libro->año }}</td>
-                <td>{{ $libro->imagen }}</td>
+                <td>{{ $prestamo->libro()->first()->nombre }}</td>
+                <td>{{ $prestamo->libro()->first()->autor }}</td>
+                <td>{{ $prestamo->libro()->first()->editorial }}</td>
+                <td>{{ $prestamo->libro()->first()->año }}</td>
                 <td>
-                <a href="{{route('devolverPremium', $libro->id)}}" class="btn btn-danger" text-center>
+                    <img class="w-20 img-fluid text-center" src="{{$prestamo->libro()->first()->imagen}}">
+                </td>
+
+                
+                <td>
+                <a href="{{route('devolverPremium', $prestamo->id)}}" class="btn btn-danger" text-center>
                         {{__('Devolver') }}
                     </a>
                 </div>
@@ -32,7 +36,7 @@
             </tr>
         @empty
             <tr>
-                <td colspan="4">
+                <td colspan="12">
                     <div class="bg-red-100 text-center border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
                         <p><strong class="font-bold">{{ __("No hay libros") }}</strong></p>
                         <span class="block sm:inline">{{ __("Todavía no hay nada que mostrar aquí") }}</span>
