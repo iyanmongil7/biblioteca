@@ -2,8 +2,8 @@
 
 @section("content")
 
-    <h1 class="text-center text-success">{{ __("Listado de libros") }}</h1>
-<table class="table table-danger table-striped" style="width: 100%">
+    <h1 class="col-12 display-5 text-center pb-3">{{ __("Listado de libros") }}</h1>
+<table class="listado table table-striped" style="width: 100%">
     <thead>
     <tr>
         <th scope="col">{{ ("Nombre") }}</th>

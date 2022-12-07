@@ -2,7 +2,7 @@
 
 @section("content")
 
-    <h1 class="text-center text-success">{{ __("Listado de prestamos") }}</h1>
+    <h1 class="text-center listado">{{ __("Listado de prestamos") }}</h1>
 <table class="table table-danger table-striped" style="width: 100%">
     <thead>
     <tr>

@@ -137,12 +137,14 @@ class LibroController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            "nombre"=>"required|max:140|unique:libros",
+            "nombre"=>"required|max:140",
             "autor" => "required|string",
             "editorial" => "required|string",
             "año" => "required|string",
             "unidades" => "required|integer",
             "imagen" => "image|mimes:jpg,gif,png,jpeg",
+        ],[
+            'required' => 'El campo :attribute esta mal.',
         ]);
 
 

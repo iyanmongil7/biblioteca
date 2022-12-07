@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="sm:container sm:mx-auto sm:mt-10">
-    <div class="w-full sm:px-6">
+<main class="sm:container sm:mx-autos">
+    <div class="w-full sm:px-6 fondo-pantalla2">
 
         @if (session('status'))
             <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
@@ -10,25 +10,15 @@
             </div>
         @endif
 
-        <div class="carousel slide carousel-fade container" id="mi-carousel" data-bs-ride="carousel">
+        <div class="pb-3 pt-3 carousel slide carousel-fade container d-flex justify-content-center  id="mi-carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img style="width: 100%" src="harry.jpg" alt="">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Harry</h5>
-                        </div>
+                        <img style="width: 100%" src="portada3.png" alt="">
+                         
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img style="width: 100%" src="hogwarts.jpg" alt="">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>hogwarts</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img style="width: 100%" src="divergente.jpg" alt="">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>divergente</h5>
-                        </div>
+                        <img style="width: 100%" src="portada4.jpg" alt="">
+                        
                     </div>
 
                 </div>
@@ -47,7 +37,7 @@
                 <div class="carousel-indicators">
                     <button type="button" class="active" data-bs-target="#mi-carousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
                     <button type="button" class="" data-bs-target="#mi-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" class="" data-bs-target="#mi-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  
                 </div>
 
 

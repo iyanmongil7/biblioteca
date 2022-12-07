@@ -14,6 +14,7 @@
 
         <div class="container">
             <h1 class="col-12 display-5 text-primary text-danger text-center mt-2 pb-5"> Metodo de pago</h1>
+            <h3 class="col-12 display-5 text-primary text-danger text-center mt-2 pb-5"> Por 2,99</h3>
             <form enctype="multipart/form-data" class="w-full max-w-lg border-4" method="GET" action="{{route('pagado')}}">
                 <div class="col-8 mt-2">
                         <p>Nºtarjeta: <input type="text-center" name="N_tarjeta" size="40"></p>

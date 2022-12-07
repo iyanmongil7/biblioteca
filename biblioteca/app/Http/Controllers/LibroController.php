@@ -35,10 +35,10 @@ class LibroController extends Controller
     public function catalogolibros(Request $request){
         $titulo = $request->get('buscarpor');
         if ($titulo == NULL) {
-            $libros = Libro::all();
+            $libros = Libro::paginate(4);
         }
         else {
-            $libros = Libro::where('nombre','like',"%$titulo%")->get();
+            $libros = Libro::where('nombre','like',"%$titulo%")->paginate(4);
         }
         return view('admin.users.libros.libroslistas', compact('libros'));
     }

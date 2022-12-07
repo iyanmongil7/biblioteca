@@ -68,5 +68,54 @@ class DatabaseSeeder extends Seeder
             'unidades' => '3',
             'imagen'=>'assassins.jpg'
         ]);
+        Libro::create([
+            'nombre'=>'Assassin',
+            'autor'=>'Oliver',
+            'editorial'=>'Lola',
+            'año'=>'2022',
+            'unidades' => '1',
+            'imagen'=>'assassins.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'1',
+            'autor'=>'Oliver',
+            'editorial'=>'Lola',
+            'año'=>'2022',
+            'unidades' => '1',
+            'imagen'=>'assassins.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'2',
+            'autor'=>'Oliver',
+            'editorial'=>'Lola',
+            'año'=>'2022',
+            'unidades' => '1',
+            'imagen'=>'assassins.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'3',
+            'autor'=>'Oliver',
+            'editorial'=>'Lola',
+            'año'=>'2022',
+            'unidades' => '1',
+            'imagen'=>'assassins.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'4',
+            'autor'=>'Oliver',
+            'editorial'=>'Lola',
+            'año'=>'2022',
+            'unidades' => '1',
+            'imagen'=>'assassins.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'5',
+            'autor'=>'Oliver',
+            'editorial'=>'Lola',
+            'año'=>'2022',
+            'unidades' => '1',
+            'imagen'=>'assassins.jpg'
+        ]);
+        
     }
 }

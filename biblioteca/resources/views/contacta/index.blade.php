@@ -2,7 +2,7 @@
 
 @section('content')
     @if(Auth::check())
-    <div class="flex justify-center flex-wrap p-4 mt-5">
+    <div class="p-5 flex justify-center flex-wrap">
         @include("contacta.form")
     </div>
 

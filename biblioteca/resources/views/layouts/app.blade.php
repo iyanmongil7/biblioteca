@@ -24,17 +24,18 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="/css/app.css" rel="stylesheet">
 </head>
-<body class="bg-gray-400 h-screen antialiased leading-none font-sans">
+<body class=" h-screen antialiased leading-none font-sans">
     <div id="app">
-        <header class="bg-gray-500 py-6">
+        <header class="fondo-pantalla py-6">
             <div class="container mx-auto flex justify-between items-center px-6 ">
                 <div>
                     <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
                         BIBLIOTECA
                     </a>
                     @if(Auth::check() and Auth::user()->hasRoles('admin'))
-                    <a href="{{url('admin')}}" class="text-lg font-semibold text-orange-200 no-underline px-3">
+                    <a href="{{url('admin')}}" class="p-5 text-lg font-semibold text-gray-100 no-underline">
                         {{__('Admin') }}
                     </a>
                     @endif
@@ -72,7 +73,7 @@
                         <a href="{{ route('logout') }}"
                            class="text-black no-underline hover:underline"
                            onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                                document.getElementById('logout-form').submit();">{{ __('Salir') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
                         </form>
@@ -81,7 +82,9 @@
             </div>
         </header>
 
-        @yield('content')
+        <div class="fondo-pantalla2">
+            @yield('content')
+        </div>
     </div>
 </body>
 </html>

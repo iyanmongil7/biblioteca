@@ -7,7 +7,7 @@
             <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
                 <header class="font-semibold bg-dark text-white py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                    {{ __('Register') }}
+                    {{ __('Registrarse') }}
                 </header>
 
                 <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST"
@@ -16,7 +16,7 @@
 
                     <div class="flex flex-wrap">
                         <label for="name" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('Name') }}:
+                            {{ __('Nombre') }}:
                         </label>
 
                         <input id="name" type="text" class="form-input w-full @error('name')  border-red-500 @enderror"
@@ -31,7 +31,7 @@
 
                     <div class="flex flex-wrap">
                         <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('E-Mail Address') }}:
+                            {{ __('Email') }}:
                         </label>
 
                         <input id="email" type="email"
@@ -40,14 +40,14 @@
 
                         @error('email')
                         <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                            {{ 'Este correo ya tiene una cuenta' }}
                         </p>
                         @enderror
                     </div>
 
                     <div class="flex flex-wrap">
                         <label for="password" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('Password') }}:
+                            {{ __('Contraseña') }}:
                         </label>
 
                         <input id="password" type="password"
@@ -63,7 +63,7 @@
 
                     <div class="flex flex-wrap">
                         <label for="password-confirm" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('Confirm Password') }}:
+                            {{ __('Confirmar Contraseña') }}:
                         </label>
 
                         <input id="password-confirm" type="password" class="form-input w-full"
@@ -73,13 +73,13 @@
                     <div class="flex flex-wrap">
                         <button type="submit"
                             class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-dark hover:bg-blue-700 sm:py-4">
-                            {{ __('Register') }}
+                            {{ __('Registarse') }}
                         </button>
 
                         <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">
-                            {{ __('Already have an account?') }}
+                            {{ __('Ya tienes una cuenta?') }}
                             <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline" href="{{ route('login') }}">
-                                {{ __('Login') }}
+                                {{ __('Entrar') }}
                             </a>
                         </p>
                     </div>

@@ -24,7 +24,7 @@
 
                         @error('email')
                         <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                            {{ 'El correo no existe' }}
                         </p>
                         @enderror
                     </div>
@@ -40,7 +40,7 @@
 
                         @error('password')
                         <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                            {{ 'La contraseña no esta bien' }}
                         </p>
                         @enderror
                     </div>

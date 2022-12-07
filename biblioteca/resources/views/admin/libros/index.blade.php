@@ -38,7 +38,7 @@
 
                 <td><a href="{{route('libros.edit',  $libro->id )}}" class="btn btn-primary btn-sm">Editar</a></td>
                 <td>
-                <a href="{{route('confirmarEliminar',  $libro->id )}}" class="btn btn-primary btn-sm">eliminar</a>
+                <a href="{{route('confirmarEliminar',  $libro->id )}}" class="btn btn-danger btn-sm">eliminar</a>
                 </td>
             </tr>
         @empty
@@ -53,6 +53,7 @@
         @endforelse
     </tbody>
 </table>
+{{ $libros->links() }}
 
 
 </div>
