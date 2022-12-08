@@ -12,7 +12,7 @@
         </div>
         @endif
 
-        <div class="container">
+        <div class="container d-flex justify-content-center pt-5">
    
         <form id="delete-libro-form" action="{{route('libros.destroy', $id)}}" method="POST" class="hidden">
                     @method('DELETE')

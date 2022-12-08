@@ -85,8 +85,8 @@ class LibroController extends Controller
 
         $this->validate($request, [
             "N_tarjeta"=>"required|max:2",
-            "Fecha_caducidad" =>"required|max:2",
-            "Codigo_seguridad" =>"required|max:2"
+            "Fecha_caducidad" =>"required|max:4",
+            "Codigo_seguridad" =>"required|max:3"
         ],[
             'required' => 'El campo :attribute es obligatorio.',
             'max' => 'El campo :attribute tiene un tamaño maximo.'

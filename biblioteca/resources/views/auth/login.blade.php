@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10 bg-dark">
+<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
     <div class="flex ">
         <div class="w-full">
             <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
-                <header class="font-semibold bg-dark text-white py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
+                <header class="font-semibold fondo-pantalla text-white py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
                     {{ __('Iniciar sesión') }}
                 </header>
 
@@ -24,7 +24,7 @@
 
                         @error('email')
                         <p class="text-red-500 text-xs italic mt-4">
-                            {{ 'El correo no existe' }}
+                            {{ 'Introduciste mal los datos' }}
                         </p>
                         @enderror
                     </div>

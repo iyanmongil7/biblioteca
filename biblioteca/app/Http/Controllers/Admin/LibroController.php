@@ -79,14 +79,16 @@ class LibroController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            "nombre"=>"required|max:140|unique:libros",
+            "nombre"=>"required|max:140",
             "autor" => "required|string",
             "editorial" => "required|string",
-            "año" => "required|string",
+            "año" => "required|integer",
             "unidades" => "required|integer",
             "imagen" => "required|image|mimes:jpg,gif,png,jpeg",
+        ],[
+            'required' => 'El campo :attribute es obligatorio.',
+            'integer' => 'El campo :attribute es un número.'
         ]);
-
         Libro::create([
             'nombre'=>$request->input("nombre"),
             'autor'=>$request->input("autor"),

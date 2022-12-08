@@ -10,13 +10,13 @@
             </div>
         @endif
 
-        <div class="pb-3 pt-3 carousel slide carousel-fade container d-flex justify-content-center  id="mi-carousel" data-bs-ride="carousel">
+        <div class="carousel slide carousel-fade container" id="mi-carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img style="width: 100%" src="portada3.png" alt="">
                          
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item pt-3" data-bs-interval="5000">
                         <img style="width: 100%" src="portada4.jpg" alt="">
                         
                     </div>
@@ -41,7 +41,7 @@
                 </div>
 
 
-            </div>
+         </div>
     </div>
 </main>
 @endsection

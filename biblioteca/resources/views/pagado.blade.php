@@ -13,7 +13,7 @@
         @endif
 
         <div class="container">
-            <h1 class="col-12 display-5 text-primary text-danger text-center mt-2 pb-5"> Pagado</h1>
+            <h1 class="col-12 display-5 pagado text-center pb-3"> Pagado</h1>
         <div type="text-center">
    
 

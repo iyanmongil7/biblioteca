@@ -69,52 +69,52 @@ class DatabaseSeeder extends Seeder
             'imagen'=>'assassins.jpg'
         ]);
         Libro::create([
-            'nombre'=>'Assassin',
-            'autor'=>'Oliver',
-            'editorial'=>'Lola',
-            'año'=>'2022',
-            'unidades' => '1',
+            'nombre'=>'Juego de tronos',
+            'autor'=>'George R. R. Martin',
+            'editorial'=>'hbo',
+            'año'=>'1996',
+            'unidades' => '3',
+            'imagen'=>'juegodetronos.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'Don quijote',
+            'autor'=>'Miguel de cervantes',
+            'editorial'=>'Micomicona ediciones',
+            'año'=>'1605',
+            'unidades' => '3',
+            'imagen'=>'donquijote.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'El principito',
+            'autor'=>'Antoine de Saint-Exupéry',
+            'editorial'=>'Salamandra',
+            'año'=>'1943',
+            'unidades' => '3',
+            'imagen'=>'elprincipito.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'El hobbit',
+            'autor'=>'J. R. R. Tolkien',
+            'editorial'=>'Booket',
+            'año'=>'1937',
+            'unidades' => '3',
+            'imagen'=>'elhobbit.jpg'
+        ]);
+        Libro::create([
+            'nombre'=>'Rick y morty',
+            'autor'=>'Zac Gorman',
+            'editorial'=>'Norma',
+            'año'=>'2016',
+            'unidades' => '3',
             'imagen'=>'assassins.jpg'
         ]);
         Libro::create([
-            'nombre'=>'1',
-            'autor'=>'Oliver',
-            'editorial'=>'Lola',
-            'año'=>'2022',
-            'unidades' => '1',
-            'imagen'=>'assassins.jpg'
-        ]);
-        Libro::create([
-            'nombre'=>'2',
-            'autor'=>'Oliver',
-            'editorial'=>'Lola',
-            'año'=>'2022',
-            'unidades' => '1',
-            'imagen'=>'assassins.jpg'
-        ]);
-        Libro::create([
-            'nombre'=>'3',
-            'autor'=>'Oliver',
-            'editorial'=>'Lola',
-            'año'=>'2022',
-            'unidades' => '1',
-            'imagen'=>'assassins.jpg'
-        ]);
-        Libro::create([
-            'nombre'=>'4',
-            'autor'=>'Oliver',
-            'editorial'=>'Lola',
-            'año'=>'2022',
-            'unidades' => '1',
-            'imagen'=>'assassins.jpg'
-        ]);
-        Libro::create([
-            'nombre'=>'5',
-            'autor'=>'Oliver',
-            'editorial'=>'Lola',
-            'año'=>'2022',
-            'unidades' => '1',
-            'imagen'=>'assassins.jpg'
+            'nombre'=>'Marvel',
+            'autor'=>'Adam Bray',
+            'editorial'=>'Dorling Kindersley',
+            'año'=>'2020',
+            'unidades' => '3',
+            'imagen'=>'marvel.jpg'
         ]);
         
     }
