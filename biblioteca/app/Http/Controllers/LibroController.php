@@ -84,7 +84,7 @@ class LibroController extends Controller
     public function pagado(Request $request){
 
         $this->validate($request, [
-            "N_tarjeta"=>"required|max:3",
+            "N_tarjeta"=>"required|max:16",
             "Fecha_caducidad" =>"required",
             "Codigo_seguridad" =>"required|max:3"
         ],[
