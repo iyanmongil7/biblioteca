@@ -29,19 +29,19 @@
         </div>
              <div class="container row justify-content-center">
                 @forelse($libros as $libro)
-           
-                <div class="col-6 d-flex justify-content-center pb-5">
-                    <div class="text-center border flex-column d-flex justify-content-center w-50 ">
-                        <h2 class="px-2 py-2 text center">{{ $libro->nombre }}</h2>
-                        <img class="w-100 img-fluid text-center" src="{{$libro->imagen}}">
-                    
-                        @if(Auth::check() and (Auth::user()->hasRoles('premium') or Auth::user()->hasRoles('admin')))
-                    <a href="{{route('crearReserva', $libro->id)}}" class="btn btn-primary pt-3">
-                        {{__('prestamo') }}
-                    </a>
-                    @endif
 
-
+                <div style="width: 50%; display:flex; justify-content: center;">
+                    <div class="card col-lg-6 col-sm-10 col-md-5 row mx-5 mb-3 d-flex justify-content-center align-items-center listado text-white sombra">
+                        <h2 class="px-2 py-2 text-center">{{ $libro->nombre }}</h2>
+                            <div class="card-header text-center col-12 d-flex justify-content-center">
+                                <img class="img-fluid border p-0" src="{{$libro->imagen}}">
+                        
+                            </div>
+                                @if(Auth::check() and (Auth::user()->hasRoles('premium') or Auth::user()->hasRoles('admin')))
+                                    <a href="{{route('crearReserva', $libro->id)}}" class="text-center d-flex justify-content-center col-3 fondo-pantalla p-3 rounded">
+                                    {{__('prestamo') }}
+                                    </a>
+                                @endif  
                     </div>
                 </div>
             

@@ -115,7 +115,7 @@ class DatabaseSeeder extends Seeder
             'año'=>'2020',
             'unidades' => '3',
             'imagen'=>'marvel.jpg'
-        ]);
-        
+        ]); 
+          
     }
 }

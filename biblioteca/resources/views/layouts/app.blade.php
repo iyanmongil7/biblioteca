@@ -40,7 +40,7 @@
                     </a>
                     @endif
 
-                    @if(Auth::check())
+                    @if(Auth::check() and (Auth::user()->hasRoles('admin') or Auth::user()->hasRoles('premium')))
                     <a href="{{ url('/librosUser') }}" class="p-5 text-lg font-semibold text-gray-100 no-underline">
                         {{ config('LibroController.name', 'LISTADO') }}
                     </a>

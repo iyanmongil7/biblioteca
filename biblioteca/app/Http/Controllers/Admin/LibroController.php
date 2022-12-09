@@ -34,7 +34,7 @@ class LibroController extends Controller
 
     public function verprestamo()
     {
-        $prestamos = Prestamo::all(); 
+        $prestamos = Prestamo::paginate(10); 
         return view("admin/libros/vistaPrestamos", compact("prestamos"));
     }
     

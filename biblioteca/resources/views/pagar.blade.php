@@ -15,21 +15,21 @@
         <div class="container">
             <h1 class="col-12 display-5 catalogo text-center pb-3"> Metodo de pago</h1>
             <h3 class="col-12 display-5 catalogo text-center pb-3"> Por 2,99</h3>
-            <form enctype="multipart/form-data" class="d-flex justify-content-center w-full max-w-lg border-4" method="GET" action="{{route('pagado')}}">
+            <form enctype="multipart/form-data" class="d-flex justify-content-center w-full max-w-lg border-4 " method="GET" action="{{route('pagado')}}  " style="margin: auto;">
                 <div class="col-8 pt-2">
-                        <p class="pb-2 pt-2">Nºtarjeta: <input type="text-center" name="N_tarjeta" size="40"></p>
+                        <p> <div class="pb-2 pt-2">Nºtarjeta:</div> <input type="text-center" name="N_tarjeta" size="40"></p>
                         @error("N_tarjeta")
                             <div class="border border-red-400 rounded-b bg-red-100 mt-1 px-4 py-3 text-red-700">
                                 {{ $message }}
                             </div>
                         @enderror
-                        <p class="pb-2 pt-2">Fecha caducidad: <input type="text" name="Fecha_caducidad" size="40"></p>
+                        <p> <div class="pb-2 pt-2">Fecha caducidad:</div> <input type="month" name="Fecha_caducidad" size="40" ></p>
                         @error("Fecha_caducidad")
                             <div class="border border-red-400 rounded-b bg-red-100 mt-1 px-4 py-3 text-red-700">
                                 {{ $message }}
                             </div>
                         @enderror
-                        <p class="pb-3 pt-2">Codigo seguridad: <input type="text" name="Codigo_seguridad" size="40"></p>
+                        <p> <div class="pb-2 pt-2">Codigo seguridad:</div><input type="text" name="Codigo_seguridad" size="40"></p>
                         @error("Codigo_seguridad")
                             <div class="border border-red-400 rounded-b bg-red-100 pb-3 mt-1 px-4 py-3 text-red-700">
                                 {{ $message }}

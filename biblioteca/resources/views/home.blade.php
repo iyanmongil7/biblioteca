@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="sm:container sm:mx-autos">
+<main class="sm:container sm:mx-autos" style="margin: auto;">
     <div class="w-full sm:px-6 fondo-pantalla2">
 
         @if (session('status'))

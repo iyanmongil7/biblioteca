@@ -42,6 +42,6 @@
         </div>
         @endif
 <div class="mt-3">
-
+{{ $prestamos->links() }}
 </div>
 @endsection

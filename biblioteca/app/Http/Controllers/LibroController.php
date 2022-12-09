@@ -54,11 +54,11 @@ class LibroController extends Controller
 
         if($tieneUsuario == 5){
             return redirect(route("librosUser"))
-            ->with("success", __("Tienes el maximo de prestamos"));
+            ->with("error", __("Tienes el maximo de prestamos"));
         }
         else if ($tieneEseLibro == 1) {
             return redirect(route("librosUser"))
-            ->with("success", __("Tienes ese libro"));
+            ->with("error", __("Tienes ese libro"));
         }
         else if ($prestado < $libro->unidades) {
             $idUsuario = Auth::user()->id;
@@ -73,7 +73,7 @@ class LibroController extends Controller
         }
         else {
             return redirect(route("librosUser"))
-            ->with("success", __("Prestamo no creado!"));
+            ->with("error", __("Prestamo no creado!"));
         }
     }
 
@@ -84,8 +84,8 @@ class LibroController extends Controller
     public function pagado(Request $request){
 
         $this->validate($request, [
-            "N_tarjeta"=>"required|max:2",
-            "Fecha_caducidad" =>"required|max:4",
+            "N_tarjeta"=>"required|max:3",
+            "Fecha_caducidad" =>"required",
             "Codigo_seguridad" =>"required|max:3"
         ],[
             'required' => 'El campo :attribute es obligatorio.',
@@ -103,7 +103,7 @@ class LibroController extends Controller
     {
         $prestamos = Prestamo::find($id);
         $prestamos->delete();
-        return back()->with("success", __("Prestamo eliminado!")); 
+        return back()->with("error", __("Prestamo eliminado!")); 
         
     }
 
