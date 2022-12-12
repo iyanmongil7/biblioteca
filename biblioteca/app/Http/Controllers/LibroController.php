@@ -43,6 +43,11 @@ class LibroController extends Controller
         return view('admin.users.libros.libroslistas', compact('libros'));
     }
 
+    public function verLibro($idLibro) {
+        $libro = Libro::find($idLibro);
+        return view('admin.users.libros.libro', compact('libro'));
+    }
+
     public function crearPrestamo($idLibro)
     {
         $prestado = Prestamo::where('libros', '=', $idLibro)->count();
@@ -60,7 +65,11 @@ class LibroController extends Controller
             return redirect(route("librosUser"))
             ->with("error", __("Tienes ese libro"));
         }
-        else if ($prestado < $libro->unidades) {
+        else if ($prestado >= $libro->unidades) {
+            return redirect(route("librosUser"))
+            ->with("error", __("No hay unidades disponibles"));
+        }
+        else {
             $idUsuario = Auth::user()->id;
             $fecha = date('Y-m-d');
             Prestamo::create([
@@ -70,10 +79,6 @@ class LibroController extends Controller
             ]);
             return redirect(route("librosUser"))
             ->with("success", __("Prestamo creado!"));
-        }
-        else {
-            return redirect(route("librosUser"))
-            ->with("error", __("Prestamo no creado!"));
         }
     }
 

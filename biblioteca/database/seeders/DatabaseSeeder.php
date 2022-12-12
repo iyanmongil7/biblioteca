@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Salamandra ABC',
             'año'=>'1997',
             'unidades' => '3',
-            'imagen'=>'harry.jpg'
+            'imagen'=>'images/harry.jpg'
         ]);
 
         Libro::create([
@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Minorauto',
             'año'=>'1995',
             'unidades' => '3',
-            'imagen'=>'señoranillos.jpg'
+            'imagen'=>'images/señoranillos.jpg'
         ]);
         
         Libro::create([
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Scholastic Corporation',
             'año'=>'2012',
             'unidades' => '3',
-            'imagen'=>'juegosdelhambre.jpg'
+            'imagen'=>'images/juegosdelhambre.jpg'
         ]);
         Libro::create([
             'nombre'=>'Las cronicas de narnia',
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Planeta',
             'año'=>'1950',
             'unidades' => '3',
-            'imagen'=>'cronicasnarnia.jpg'
+            'imagen'=>'images/cronicasnarnia.jpg'
         ]);
         Libro::create([
             'nombre'=>'The wicther: El ultimo deseo',
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Coleccionista',
             'año'=>'2002',
             'unidades' => '3',
-            'imagen'=>'thewitcher.jpg'
+            'imagen'=>'images/thewitcher.jpg'
         ]);
         Libro::create([
             'nombre'=>'Assassin Creed',
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Minorauto',
             'año'=>'2021',
             'unidades' => '3',
-            'imagen'=>'assassins.jpg'
+            'imagen'=>'images/assassins.jpg'
         ]);
         Libro::create([
             'nombre'=>'Juego de tronos',
@@ -74,7 +74,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'hbo',
             'año'=>'1996',
             'unidades' => '3',
-            'imagen'=>'juegodetronos.jpg'
+            'imagen'=>'images/juegodetronos.jpg'
         ]);
         Libro::create([
             'nombre'=>'Don quijote',
@@ -82,7 +82,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Micomicona ediciones',
             'año'=>'1605',
             'unidades' => '3',
-            'imagen'=>'donquijote.jpg'
+            'imagen'=>'images/donquijote.jpg'
         ]);
         Libro::create([
             'nombre'=>'El principito',
@@ -90,7 +90,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Salamandra',
             'año'=>'1943',
             'unidades' => '3',
-            'imagen'=>'elprincipito.jpg'
+            'imagen'=>'images/elprincipito.jpg'
         ]);
         Libro::create([
             'nombre'=>'El hobbit',
@@ -98,7 +98,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Booket',
             'año'=>'1937',
             'unidades' => '3',
-            'imagen'=>'elhobbit.jpg'
+            'imagen'=>'images/elhobbit.jpg'
         ]);
         Libro::create([
             'nombre'=>'Rick y morty',
@@ -106,7 +106,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Norma',
             'año'=>'2016',
             'unidades' => '3',
-            'imagen'=>'assassins.jpg'
+            'imagen'=>'images/assassins.jpg'
         ]);
         Libro::create([
             'nombre'=>'Marvel',
@@ -114,7 +114,7 @@ class DatabaseSeeder extends Seeder
             'editorial'=>'Dorling Kindersley',
             'año'=>'2020',
             'unidades' => '3',
-            'imagen'=>'marvel.jpg'
+            'imagen'=>'images/marvel.jpg'
         ]); 
           
     }

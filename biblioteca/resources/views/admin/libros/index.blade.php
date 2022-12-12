@@ -3,6 +3,16 @@
 @section("content")
 
     <h1 class="text-center text-dark">{{ __("Listado de libros") }}</h1> 
+    @if (session('success'))
+        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
+        @if (session('error'))
+        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
+            {{ session('error') }}
+        </div>
+        @endif   
     <div class="text-center pt-2 pb-2">
     <a href="{{route('libros.create')}}" class="btn btn-primary">Añadir</a>
     </div>

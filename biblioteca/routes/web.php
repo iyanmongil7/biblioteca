@@ -40,6 +40,7 @@ Route::get('/librosUser', [\App\Http\Controllers\LibroController::class, 'index'
 Route::get('/prestamos', [\App\Http\Controllers\LibroController::class, 'prestamos'])->name('prestamos');
 Route::get('/libroslistas', [\App\Http\Controllers\LibroController::class, 'listalibros'])->name('libroslistas');
 Route::get('/catalogolibros', [\App\Http\Controllers\LibroController::class, 'catalogolibros']);
+Route::get('/catalogolibros/{id}', [\App\Http\Controllers\LibroController::class, 'verLibro'])->name('verLibro');
 Route::get('/crearreserva/{id}', [\App\Http\Controllers\LibroController::class, 'crearPrestamo'])->name('crearReserva');
 Route::get('/borrarreserva/{id}', [\App\Http\Controllers\LibroController::class, 'borrarreserva'])->name('borrarreserva');
 

@@ -13,11 +13,11 @@
         <div class="carousel slide carousel-fade container" id="mi-carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img style="width: 100%" src="portada3.png" alt="">
+                        <img style="width: 100%" src="images\portada3.png" alt="">
                          
                     </div>
                     <div class="carousel-item pt-3" data-bs-interval="5000">
-                        <img style="width: 100%" src="portada4.jpg" alt="">
+                        <img style="width: 100%" src="images\portada4.jpg" alt="">
                         
                     </div>
 

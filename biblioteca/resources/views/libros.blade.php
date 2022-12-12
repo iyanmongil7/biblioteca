@@ -3,6 +3,18 @@
 @section("content")
 
     <h1 class="col-12 display-5 text-center pb-3">{{ __("Listado de libros") }}</h1>
+
+    @if (session('success'))
+        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
+        @if (session('error'))
+        <div class="text-sm border border-t-8 rounded text-red-700 border-green-600 bg-red-100 px-3 py-4 mb-4" role="alert">
+            {{ session('error') }}
+        </div>
+        @endif
+
 <table class="listado table table-striped" style="width: 100%">
     <thead>
     <tr>
@@ -46,16 +58,6 @@
         @endforelse
     </tbody>
 </table>
-@if (session('success'))
-        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
-            {{ session('success') }}
-        </div>
-        @endif
-        @if (session('error'))
-        <div class="text-sm border border-t-8 rounded text-red-700 border-green-600 bg-red-100 px-3 py-4 mb-4" role="alert">
-            {{ session('error') }}
-        </div>
-        @endif
 
 <div class="mt-3">
 

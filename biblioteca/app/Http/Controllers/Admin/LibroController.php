@@ -172,9 +172,17 @@ class LibroController extends Controller
      */
     public function destroy($id)
     {
-        $libros = Libro::find($id);
-        $libros->delete();
-        return redirect('/admin/libros')->with("success", __("Libro eliminado!"));
+        $prestado = Prestamo::where('libros', '=', $id)->count();
+
+        if ($prestado > 0) {
+            return redirect("admin/libros")
+            ->with("error", __("No se puede borrar el libro"));
+        }
+        else {
+            $libros = Libro::find($id);
+            $libros->delete();
+            return redirect('admin/libros')->with("success", __("Libro eliminado!"));
+        }
     }
 
     public function confirmarEliminar($id){
