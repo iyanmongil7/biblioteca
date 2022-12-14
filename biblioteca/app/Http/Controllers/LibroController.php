@@ -89,12 +89,13 @@ class LibroController extends Controller
     public function pagado(Request $request){
 
         $this->validate($request, [
-            "N_tarjeta"=>"required|max:16",
-            "Fecha_caducidad" =>"required",
-            "Codigo_seguridad" =>"required|max:3"
+            "N_tarjeta"=>"required|size:16",
+            "Fecha_caducidad" =>"required|after:now",
+            "Codigo_seguridad" =>"required|size:3"
         ],[
             'required' => 'El campo :attribute es obligatorio.',
-            'max' => 'El campo :attribute tiene un tamaño maximo.'
+            'size' => 'El campo :attribute tiene un tamaño maximo.',
+            'after' => 'El campo :attribute no es correcto.'
         ]);
 
         $usuario = User::find(Auth::user()->id);
