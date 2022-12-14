@@ -234,7 +234,7 @@ return [
             'text' => '',
             'icon' => 'fas fa-fw fa-home',
             'topnav_right' => true,
-            'url'  => 'http://biblioteca.test/librosUser/',
+            'url'  => '/',
         ],
 
         // Sidebar items:
