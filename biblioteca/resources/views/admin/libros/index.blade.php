@@ -19,8 +19,6 @@
 <table class="table table-success table-striped" style="width: 100%">
     <thead>
     <tr>
-        
-
         <th scope="col">{{ ("Nombre") }}</th>
         <th scope="col">{{ ("Autor") }}</th>
         <th scope="col">{{ ("Editorial") }}</th>
@@ -29,11 +27,7 @@
         <th scope="col">{{ ("Imagen") }}</th>
     </tr>
     </thead>
-    @if (session('success'))
-        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
-            {{ session('success') }}
-        </div>
-        @endif
+
     <tbody>
         
         @forelse($libros as $libro)
