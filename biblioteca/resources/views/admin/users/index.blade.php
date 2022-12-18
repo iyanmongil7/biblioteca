@@ -33,6 +33,8 @@
                 <td>{{ date_format($user->created_at, "d/m/Y") }}</td>
                 <td class="border px-4 py-2">
              
+              
+                @if ($user->id!=1)
                 <a href="#" class="text-red-400" onclick="event.preventDefault();
                                 document.getElementById('delete-user-{{ $user->id }}-form').submit();"><button class="btn btn-danger btn-sm">{{ __("Eliminar") }}</button>
                 </a>
@@ -40,6 +42,7 @@
                     @method("DELETE")
                     @csrf
                 </form>
+                @endif
               
                 
                 </td>

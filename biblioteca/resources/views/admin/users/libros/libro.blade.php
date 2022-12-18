@@ -31,7 +31,6 @@
                             <p class="pt-2 pb-2">Autor: {{ $libro->autor }}</p>
                             <p class="pt-2 pb-2">Editorial: {{ $libro->editorial }}</p>
                             <p class="pt-2 pb-2">Año: {{ $libro->año }}</p>
-                            <p class="pt-2 pb-2">Editorial: {{ $libro->editorial }}</p>
                             <p class="pt-2 pb-2">Unidades: {{ $libro->unidades - App\Models\Prestamo::where('libros', '=', $libro->id)->count() }}</p>
                             </div>
                             

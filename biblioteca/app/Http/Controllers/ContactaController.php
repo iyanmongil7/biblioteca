@@ -12,15 +12,9 @@ class ContactaController extends Controller
         return view('contacta.index');
     }
 
-    public function store(Request $request){
+    public function store(){
 
-        $request->validate([
-            'name'=>'required',
-            'email'=>'required|email',
-            'mensaje'=>'required',
-        ]);
-        $correo=new ContactaMail($request->all());
-        Mail::to('iyanmg49@edcuastur.es')->send($correo);
+       
         return redirect(route('contacta.index'))->with('success','Email enviado');
     }
 
